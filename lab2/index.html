@@ -1,0 +1,38 @@
+<h1>資工課表</h1>
+<table id = "csie" class ="table table-striped table-hover">
+    <tr>
+      <th>開課單位</th>
+      <th>課程名稱</th>
+      <th>授課教師</th>
+    </tr>
+</table>
+
+<button onclick="addnewdata()"> addNewdata</button>
+<button onclick="delolddata()"> DelOlddata</button>
+
+<script>
+
+  var d = ["資工系","資工系","資工系","資工系","資工系","資工系"];
+  var c = ["物件導向","計算機網路實驗","作業系統實務","生物統計","通訊系統","軟硬體專題"];
+  var t = ["黃崇源","李春良","張哲維","陳光武","仁輝","魏志達"];
+  function addnewdata() {
+  var myTable = document.getElementById("csie");
+  var rowCount = c.length;
+  var cellCount = myTable.row[0].cells.length;
+  for(var i = 0; i<rowCount;i++) {
+    var row = myTable.insertRow(-1);
+    row.inserCell(0).innerHTML = d[i];
+    row.inserCell(1).innerHTML = c[i];
+    row.inserCell(2).innerHTML = t[i];
+    console.log(d[i],c[i],t[i]);
+  }
+}
+function delolddata(){
+  var myTable = document.getElementById("csie");
+  var rowCount = c.length;
+  var cellCount = myTable.row[0].cells.length;
+    var row = myTable.deletRow(-1);
+
+  }
+}
+</script>
